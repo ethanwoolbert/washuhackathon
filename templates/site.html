@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="/static/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Post Stuff -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -31,10 +36,25 @@
         <br />
         <div class='posts'>
             {% for i in range(posts|length) %}
-            <div class='post'>
-                <div>{{posts[i]['username']}}</div>
-                <div>{{posts[i]['message']}}</div>
-                <div>${{posts[i]['time']}}</div>
+            <div class="col-md-4">
+                <div class="item-box-blog">
+                    <div class="item-box-blog-body">
+                        <!--Heading-->
+                        <div class="item-box-blog-heading">
+                            <a href="#" tabindex="0">
+                                <h5>{{posts[i]['title']}}</h5>
+                            </a>
+                        </div>
+                        <!--Data-->
+                        <div class="item-box-blog-data" style="padding: px 15px;">
+                            <p><i class="fa fa-user-o"></i> {{posts[i]['username']}}</p>
+                        </div>
+                        <!--Text-->
+                        <div class="item-box-blog-text">
+                            <p>Description: {{posts[i]['message']}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             {% endfor %}
         </div>

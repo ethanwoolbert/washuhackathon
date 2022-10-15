@@ -2,6 +2,7 @@
 #navbar {
     height: 80px;
     background-color: red;
+    font-size: 1.25vw;
 }
 
 .logo {
@@ -72,16 +73,31 @@
 
 .post {
     background-color: darkblue;
-    width: 25vw;
-    height: 20vh;
+    width: 20vw;
+    height: 25vh;
     overflow-y: auto;
     color: white;
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
     border-radius: 10px;
-    padding: 2vw;
-    display: flex;
+    padding-left: 5vw;
     align-items: center;
     justify-content: center;
     font-size: 1.25vw;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.5px;
+}
+
+.postPic {
+    width: 10vw;
+    height: auto;
+}
+
+.col-md-4 {
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
 }
