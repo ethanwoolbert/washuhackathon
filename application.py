@@ -21,7 +21,7 @@ def login():
 
     person = users.find_one({'username': username, 'password': password})
 
-    posts = [{'username': "mo", 'message': "Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.", 'title': "mo", 'time': "mo"}, {
+    posts = [{'username': "mo", 'message': "mo", 'title': "mo", 'time': "mo"}, {
         'username': "mo", 'message': "Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.", 'title': "mo", 'time': "mo"}, {'username': "mo", 'message': "Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.", 'title': "mo", 'time': "mo"}, {'username': "mo", 'message': "Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.", 'title': "mo", 'time': "mo"}]
 
     if person:
