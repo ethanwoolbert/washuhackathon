@@ -30,11 +30,11 @@
         <div class='content'>Checkout whats going on in the WashU Community</div>
         <br />
         <div class='posts'>
-            {% for i in range(names|length) %}
+            {% for i in range(posts|length) %}
             <div class='post'>
-                <td>{{Message[i]}}</td>
-                <td>{{Author[i]}}</td>
-                <td>${{Dater[i]}}</td>
+                <div>{{posts[i]['username']}}</div>
+                <div>{{posts[i]['message']}}</div>
+                <div>${{posts[i]['time']}}</div>
             </div>
             {% endfor %}
         </div>
