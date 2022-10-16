@@ -109,7 +109,7 @@
 .col-md-3 {
     border-style: solid;
     border-color: black;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 2%;
@@ -134,3 +134,10 @@
     font-size: 1.25vw;
 }
 
+.shadow{
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.post-background{
+    background-color: rgb(233, 233, 233);
+}

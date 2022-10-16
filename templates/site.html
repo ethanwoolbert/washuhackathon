@@ -27,14 +27,14 @@
 <body>
     <!--Navbar-->
     <div id="navbar">
-        <h1 class = "logo">YesChat<small class="subText">Where anything goes</small></h1>
+        <h1 class = "logo">YesChat  <small class="subText">Where anything goes</small></h1>
     </div>
 
     <!--First Row Container-->
     <div>
-        <div class='content'><b>Check out what's going on in the WashU Community</b></div>
+        <div class='content'><b>Check out what's going on in your local community</b></div>
         <!--Submit Post-->
-        <div class="creation-form">
+        <div class="creation-form shadow">
             <form action="/postPage" method="post">
                 <div class="form-group Jacob">
                     <button type="submit" class="btn btn-primary btn-block" style="border-radius: 10px;">Create Post</button>
@@ -43,7 +43,7 @@
         </div>
         <div class='posts'>
             {% for i in range(posts|length) %}
-            <div class="col-md-3 shadow">
+            <div class="col-md-3 shadow post-background">
                 <div class="item-box-blog">
                     <div class="item-box-blog-body">
                         <!--Heading-->
