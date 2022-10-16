@@ -2,7 +2,6 @@
 #navbar {
     height: 80px;
     background-color: red;
-    font-size: 1.25vw;
 }
 
 .logo {
@@ -10,6 +9,7 @@
     padding-top: 16px;
     color: white;
     font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
 }
 
 /*Signup CSS*/
@@ -111,4 +111,8 @@
     width: 30%;
     margin-left: 35%;
     margin-top: 50px;
+}
+
+.Jacob{
+    font-size: 1.25vw;
 }
