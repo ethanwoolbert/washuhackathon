@@ -6,13 +6,14 @@ db = client['tradewashu']
 users = db['users']
 posts = db['posts']
 
-for x in posts.find():
-    print(x)
-
 app = Flask(__name__)
 
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/landingPage", methods=["POST"])
+def landingPage():
     return render_template("index.html")
 
 @app.route("/login", methods=["POST"])
@@ -68,6 +69,24 @@ def changePassword():
         return render_template('index.html')
     
     return render_template('error.html')
+
+@app.route("/forgotPasswordPage", methods=["POST"])
+def forgotPasswordPage():
+    return render_template("forgotPassword.html", message="")
+
+@app.route("/forgotPassword", methods=["POST"])
+def forgotPassword():
+    username = str(request.form.get("username"))
+    email = str(request.form.get("email"))
+
+    person = users.find_one({'username': username, 'email': email})
+
+    if person:
+        message = 'Password: ' + person['password']
+    else:
+        message = 'That username/email combination does not exist.'
+
+    return render_template("forgotPassword.html", message=message)
 
 @app.route("/postPage", methods=["POST"])
 def postPage():
