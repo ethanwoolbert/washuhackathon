@@ -59,9 +59,15 @@
                             <p>{{posts[i]['message']}}</p>
                         </div>
                         <!--Image-->
-                        <div class="item-box-blog-image">
+                        <div class="item-box-blog-image" style="margin-bottom: 70px">
                             <figure> <img alt="" src="{{posts[i]['image']}}" class="postPic"> </figure>
                         </div>
+                        <!--Comments-->
+                        <form action="/postComments" method="post">
+                            <div class="form-group" style="position: absolute; bottom: 0px;">
+                                <button type="submit" class="btn btn-black btn-block" value="{{posts[i]['id']}}" name="id">Comments</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
