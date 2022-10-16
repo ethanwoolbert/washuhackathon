@@ -72,6 +72,7 @@ def postPage():
 
 @app.route("/createPost", methods=["POST"])
 def createPost():
+    title = str(request.form.get("username"))
     username = str(request.form.get("username"))
     message = str(request.form.get("message"))
 
@@ -80,7 +81,7 @@ def createPost():
     else:
         id = 0
 
-    posts.insert_one({'id': id, 'username': username, 'message': message})
+    posts.insert_one({'id': id, 'title': title,'username': username, 'message': message})
 
     return render_template("site.html", posts=list(reversed([x for x in posts.find()])))
 
