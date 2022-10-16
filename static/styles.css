@@ -141,3 +141,11 @@
 .post-background{
     background-color: rgb(233, 233, 233);
 }
+
+/*Comment CSS*/
+.comment {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 30vw;
+    margin-left: 35vw;
+}
