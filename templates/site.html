@@ -29,20 +29,18 @@
     <div id="navbar">
         <h1 class="logo">Trade WashU</h1>
     </div>
-    
-    <!--Submit Post-->
-    <div class="generic-form">
-        <form action="/postPage" method="post">
-            <div class="form-group Jacob">
-                <button type="submit" class="btn btn-primary btn-block">Create Post</button>
-            </div>
-        </form>
-    </div>
 
     <!--First Row Container-->
     <div>
         <div class='content'>Check out what's going on in the WashU Community</div>
-        <br />
+        <!--Submit Post-->
+        <div class="generic-form">
+            <form action="/postPage" method="post">
+                <div class="form-group Jacob">
+                    <button type="submit" class="btn btn-primary btn-block">Create Post</button>
+                </div>
+            </form>
+        </div>
         <div class='posts'>
             {% for i in range(posts|length) %}
             <div class="col-md-3">
@@ -50,9 +48,7 @@
                     <div class="item-box-blog-body">
                         <!--Heading-->
                         <div class="item-box-blog-heading">
-                            <a href="#" tabindex="0">
-                                <h5>{{posts[i]['title']}}</h5>
-                            </a>
+                            <h3>{{posts[i]['title']}}</h3>
                         </div>
                         <!--Data-->
                         <div class="item-box-blog-data" style="padding: px 15px;">
