@@ -41,6 +41,9 @@ def signup():
     password = str(request.form.get("password"))
     email = str(request.form.get("email"))
 
+    if users.find_one({'username': username}):
+        return render_template("error.html")
+
     users.insert_one({'id': [x for x in users.find()][-1]['id'] + 1, 'username': username, 'password': password, 'email': email})
 
     return render_template("index.html")
@@ -75,13 +78,14 @@ def createPost():
     title = str(request.form.get("title"))
     username = str(request.form.get("username"))
     message = str(request.form.get("message"))
+    image = str(request.form.get("image"))
 
     if [x for x in posts.find()]:
         id = [x for x in posts.find()][-1]['id'] + 1
     else:
         id = 0
 
-    posts.insert_one({'id': id, 'title': title,'username': username, 'message': message})
+    posts.insert_one({'id': id, 'title': title,'username': username, 'message': message, 'ip': request.remote_addr, 'image': image})
 
     return render_template("site.html", posts=list(reversed([x for x in posts.find()])))
 
