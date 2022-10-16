@@ -1,22 +1,30 @@
 /*Navbar CSS*/
 #navbar {
-    height: 80px;
+    height: 10%;
     background-color: red;
+    display: flex;
+    align-items: flex-end;
+    bottom: 0;
+    color: white;
 }
 
 .logo {
     margin-left: 200px;
-    padding-top: 16px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 3vw;
+}
+
+.subText{
+    font-family: 'Poppins', sans-serif;
+    font-size: .75vw;
 }
 
 /*Signup CSS*/
 .login-form {
     width: 340px;
     margin: 50px auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .login-form form {
@@ -57,11 +65,13 @@
 .content {
     display: flex;
     justify-content: center;
-    background-color: darkblue;
-    color: lightgreen;
-    height: 10vh;
+    background-color: white;
+    color: red;
+    height: 5vh;
+    margin-top: 2vh;
     align-items: center;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
+    margin-bottom: 20px;
 }
 
 .posts {
@@ -113,6 +123,14 @@
     margin-top: 50px;
 }
 
+.creation-form{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
 .Jacob{
     font-size: 1.25vw;
 }
+
