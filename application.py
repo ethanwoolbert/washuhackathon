@@ -5,6 +5,7 @@ client = MongoClient('mongodb+srv://edwoolbert:h0meisb0ss@cluster0.ejycszy.mongo
 db = client['tradewashu']
 users = db['users']
 posts = db['posts']
+comments = db['comments']
 
 app = Flask(__name__)
 
@@ -107,6 +108,20 @@ def createPost():
     posts.insert_one({'id': id, 'title': title,'username': username, 'message': message, 'ip': request.remote_addr, 'image': image})
 
     return render_template("site.html", posts=list(reversed([x for x in posts.find()])))
+
+@app.route("/postComments", methods=["POST"])
+def postComments():
+    id = int(request.form.get("id"))
+
+    return render_template("postComments.html", post=posts.find_one({'id': id}), comments=list(reversed([x for x in comments.find({'id':id})])))
+
+@app.route("/comment", methods=["POST"])
+def comment():
+    id = int(request.form.get("id"))
+    comment = str(request.form.get("comment"))
+    comments.insert_one({'id': id, "comment": comment})
+
+    return render_template("postComments.html", post=posts.find_one({'id': id}), comments=list(reversed([x for x in comments.find({'id':id})])))
 
 if __name__ == '__main__':
     app.run(use_debugger=False, use_reloader=False, passthrough_errors=True)
