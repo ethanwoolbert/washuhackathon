@@ -72,7 +72,7 @@ def postPage():
 
 @app.route("/createPost", methods=["POST"])
 def createPost():
-    title = str(request.form.get("username"))
+    title = str(request.form.get("title"))
     username = str(request.form.get("username"))
     message = str(request.form.get("message"))
 
