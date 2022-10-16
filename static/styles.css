@@ -105,3 +105,10 @@
     margin-bottom: 2%;
     font-size:1.25vw;
 }
+
+/*Form CSS*/
+.generic-form{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 50px;
+}
